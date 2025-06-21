@@ -1,0 +1,86 @@
+/* Configuración general del body para centrar "Historial de boletines" */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(ellipse, orangered, transparent, orange) orange;
+}
+
+/* Centrar el título principal */
+.header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: white; /* Ajusta el color según el diseño */
+}
+
+/* Contenedor para "Boletines visitados" */
+.historial-container {
+    width: 80%; /* Ajusta el ancho del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.historial-container h2 {
+    text-align: left; /* Alineado a la izquierda */
+    font-size: 1.5em;
+    color: white; /* Ajusta el color según el diseño */
+}
+
+/* Lista de historial */
+#historial-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#historial-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#historial-list li a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+#historial-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del botón "Back" */
+button {
+    position: absolute;
+    bottom: 10px; /* Distancia desde el borde inferior */
+    left: 10px; /* Distancia desde el borde izquierdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+}
+
+button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+}

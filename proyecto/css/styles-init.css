@@ -1,0 +1,301 @@
+
+/* Estilo del header */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px; /* Ajusta el espacio interior */
+  background-image: linear-gradient(rgba(47, 61, 214, 0.533), rgba(255, 255, 0, 0.5)), url("imagen/pasto.jpg");
+  background-size: cover; /* Cubre todo el header */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos hacia los lados */
+  align-items: center; /* Alinea los elementos verticalmente */
+  box-sizing: border-box;
+}
+
+.header h1 {
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/* Botón de iniciar sesión */
+#login-btn {
+  background-color: #4444dcd0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#login-btn:hover {
+  background-color: #1d1cc1; /* Cambia el color al pasar el ratón */
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*buscador*/
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    margin: 20px auto; /* Centra el buscador debajo del header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: 30px;
+    position: relative;
+    width: 50%;
+    height: var(--height-of-input);
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  .form-container {
+    width: 320px;
+    border-radius: 0.75rem;
+    background-color: rgba(17, 24, 39, 1);
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
+/*--------------------------------------------------------------------------------------*/
+    /* Estilos para las imágenes clickeables de los libros */
+.book-image {
+      width: 100px;
+      height: 150px;
+      object-fit: cover; /* Ajusta la imagen para que no se deforme */
+      margin-right: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+  }
+
+  .book-image:hover {
+      transform: scale(1.05); /* Agranda la imagen al pasar el ratón */
+  }
+
+  /* Ajuste de la lista de libros para que se vea bien con las imágenes */
+  li {
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      border-bottom: 1px solid #ccc;
+  }
+
+  li div {
+      flex-grow: 1;
+  }
+
+  .book-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+
+  .book-author {
+      font-style: italic;
+      color: #555;
+  }
+
+
+
+    /* Login */ 
+.modal {
+    display: none; /* Ocultar el formulario de inicio de sesión emergente por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 370px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 1; /* Mostrar el formulario de inicio de sesión emergente encima de otros elementos */
+  }
+      
+    .modal-content {
+      margin: 0px;
+      padding: auto;
+    }
+    /* Estilos para los grupos de input */
+    .input-group {
+      display: block; /* Asegura que cada input esté en su propia línea */
+      margin-bottom: 15px; /* Espacio entre los grupos */
+    }
+
+    /* Estilo para las etiquetas */
+    .input-group label {
+      display: block; /* Asegura que las etiquetas estén en su propia línea */
+      margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+      font-weight: bold; /* Resalta las etiquetas */
+    }
+
+    /* Estilos para los inputs */
+    .input-group input {
+      width: 100%; /* Hace que los inputs ocupen el 100% del ancho del contenedor */
+      padding: 8px;
+      border: 1px solid #4c4848;
+      border-radius: 5px;
+      box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    }
+
+    /* Estilo para el enlace "Contraseña olvidada" */
+    .forgot {
+      margin-top: 5px; /* Espacio entre el input y el enlace */
+      text-align: right;
+    }
+
+    /* Estilo para el botón */
+    button.sign {
+      display: block;
+      width: 100%; /* El botón ocupa todo el ancho */
+      padding: 10px;
+      background-color: #4444dcd0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 15px; /* Espacio entre el último input y el botón */
+    }
+
+    button.sign:hover {
+      background-color: #1d1cc1;
+    }
+    .close {
+      background: #606061;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: 1px;
+      text-align: center;
+      top: 1px;
+      width: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius:3px;
+  }
+
+  .social-icons .icon svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: #fff;
+  }
+/* Contenedor del menú de usuario */
+#user-menu {
+  position: relative; /* Para que los elementos desplegables se posicionen en relación a este */
+  display: inline-block;
+  left: -100px;
+}
+  .button-user {
+    width: 110%; /* El botón ocupa todo el ancho */
+    padding: 10px;
+    background-color: #ec540e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px; /* Espacio entre el último input y el botón */
+  }
+
+  /* Estilo de los elementos desplegables */
+  #user, #admin, #especialista {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%; /* Posiciona el menú justo debajo del botón de usuario */
+    left: 0; /* Alinea el menú con el lado izquierdo del botón */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Estilo de los enlaces dentro del menú desplegable */
+  #user a, #admin a, #especialista a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Color de fondo cuando se pasa el ratón sobre un enlace */
+  #user a:hover, #admin a:hover, #especialista a:hover {
+    background-color: #f1f1f1;
+  }
+
+
+
+
+
