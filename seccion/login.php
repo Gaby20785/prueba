@@ -1,5 +1,5 @@
 <?php
-require_once('config/config.php');
+require_once 'config/config.php';
 
 // Recibir los datos del formulario
 $data = json_decode(file_get_contents("php://input"), true);
@@ -31,7 +31,6 @@ if ($user) {
     echo json_encode(['error' => 'Correo o contraseña incorrectos']);
 }
 
-?>
 
 
 
